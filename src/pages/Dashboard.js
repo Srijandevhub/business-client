@@ -32,18 +32,34 @@ const Dashboard = () => {
                         </div>
                         <div className="card-body">
                             <div className="top-pane">
-                                <div className="pane-col">
-                                    <div className="pane-box">
-                                        <div className="pane-heading">Cards</div>
-                                        <div className="pane-count">{cards}</div>
-                                    </div>
-                                </div>
-                                <div className="pane-col">
-                                    <div className="pane-box">
-                                        <div className="pane-heading">Users</div>
-                                        <div className="pane-count">{users}</div>
-                                    </div>
-                                </div>
+                                {
+                                    localStorage.getItem("modules") &&
+                                    <>
+                                    {
+                                        JSON.parse(localStorage.getItem("modules")).cardmanagement &&
+                                        <div className="pane-col">
+                                            <div className="pane-box">
+                                                <div className="pane-heading">Cards</div>
+                                                <div className="pane-count">{cards}</div>
+                                            </div>
+                                        </div>
+                                    }
+                                    </>
+                                }
+                                {
+                                    localStorage.getItem("modules") &&
+                                    <>
+                                    {
+                                        JSON.parse(localStorage.getItem("modules")).usermanagement &&
+                                        <div className="pane-col">
+                                            <div className="pane-box">
+                                                <div className="pane-heading">Users</div>
+                                                <div className="pane-count">{users}</div>
+                                            </div>
+                                        </div>
+                                    }
+                                    </>
+                                }
                                 <div className="pane-col"></div>
                             </div>
                         </div>

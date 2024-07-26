@@ -1048,6 +1048,132 @@ header {
     font-weight: 700;
     margin-top: 20px;
 }
+.user-profile-body {
+    padding: 5px;
+    background: #3c7e67;
+    position: relative;
+    border-radius: 0 0 5px 5px;
+}
+.user-profile-body::before {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    background: #3c7e67;
+    height: 8px;
+    content: "";
+}
+.remove-btn {
+    padding: 0;
+    display: inline-block;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #e55353;
+    text-decoration: underline;
+}
+.profilepage-image-wrapper {
+    max-width: 150px;
+    text-align: center;
+}
+.req-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    border: 2px solid #119b77;
+    border-radius: 60px;
+    color: #119b77;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    font-size: 14px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-transform: uppercase;
+}
+.d-flex {
+    display: flex;
+}
+.justify-end {
+    justify-content: end;
+}
+.tox .tox-statusbar {
+    display: none;
+}
+.request-box {
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.request-id {
+    font-weight: 600;
+    color: #e55353;
+}
+.req-body {
+    background: #ddd;
+    padding: 10px;
+    border-radius: 5px;
+}
+.req-body p {
+    margin: 0px;
+}
+.chats-wrapper {
+    padding: 10px;
+    background: #ddd;
+    margin-top: 10px;
+    overflow: auto;
+    border-radius: 5px 5px 0 0;
+}
+.chat-row {
+    display: flex;
+    margin-bottom: 15px;
+}
+.chat-row.right {
+    justify-content: flex-end;
+}
+.chat-row.left {
+    justify-content: flex-start;
+}
+.chat-box {
+    padding: 5px 12px;
+    background: #fff;
+    border-radius: 5px;
+}
+.chat-row.right .chat-box {
+    background: #00E676;
+}
+.chat-message-sender {
+    position: relative;
+    border-top: 1px solid #b3b3b3;
+}
+.chat-message-sender input {
+    width: 100%;
+    height: 35px;
+    border: none;
+    outline: none;
+    background: #ddd;
+    border-radius: 0 0 5px 5px;
+    padding: 0 17px;
+    padding-right: 30px;
+}
+.chat-message-sender button {
+    font-size: 0px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #2e0046;
+    position: absolute;
+    top: 4px;
+    right: 5px;
+    cursor: pointer;
+}
 @media only screen and (max-width: 1099px) {
     .signup-col {
         width: 100%;

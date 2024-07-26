@@ -3,7 +3,7 @@ import { useState } from "react"
 import { backendUrl } from "../utils/urls";
 import { Flip, toast } from "react-toastify";
 
-const FirstLogin = () => {
+const FirstLogin = ({ username }) => {
     const [current, setCurrent] = useState("");
     const [newPassword, setNewPassword] = useState("");
     const handleFirstLogin = async () => {
@@ -54,6 +54,7 @@ const FirstLogin = () => {
     return (
         <div className="first-login-wrapper">
             <div className="first-login-box">
+                <p>Welcome {username}, for the first time you need to change your password and again login with new password in order to start your dashboard.</p>
                 <div className="signup-form-wrapper mb-20px">
                     <label htmlFor="currpass" className="signup-label form-label">Current Password</label>
                     <input type="password" id="currpass" value={current} className="signup-input" onChange={(e) => setCurrent(e.target.value)}/>

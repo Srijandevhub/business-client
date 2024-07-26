@@ -10,6 +10,9 @@ import Users from "./pages/Users";
 import CreateUser from "./pages/CreateUser";
 import EditUser from "./pages/EditUser";
 import Dashboard from "./pages/Dashboard";
+import UserProfile from "./pages/UserProfile";
+import RaiseRequest from "./pages/RaiseRequest";
+import RequestChat from "./components/RequestChat";
 
 const App = () => {
   return (
@@ -25,6 +28,9 @@ const App = () => {
         <Route path="/dashboard/users" element={<ProtectedRoute><Users /></ProtectedRoute>}/>
         <Route path="/dashboard/newuser" element={<ProtectedRoute><CreateUser /></ProtectedRoute>}/>
         <Route path="/dashboard/edituser/:id" element={<ProtectedRoute><EditUser /></ProtectedRoute>}/>
+        <Route path="/dashboard/userprofile" element={<ProtectedRoute><UserProfile /></ProtectedRoute>}/>
+        <Route path="/dashboard/raiserequest" element={<ProtectedRoute><RaiseRequest /></ProtectedRoute>}/>
+        <Route path="/dashboard/requestchat/:id" element={<ProtectedRoute><RequestChat /></ProtectedRoute>}/>
         <Route path="/card/:id" element={<DynamicCard />}/>
       </Routes>
     </BrowserRouter>
