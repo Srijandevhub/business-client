@@ -195,7 +195,7 @@ const EditUser = () => {
                     <div className="card">
                         <div className="card-header">
                             <div className="card-header-heading">
-                                Create User
+                                Edit User
                             </div>
                         </div>
                         <div className="card-body">
